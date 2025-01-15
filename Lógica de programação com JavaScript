@@ -1,0 +1,15 @@
+alert("Boas vindas ao nosso site"); // comando para imprimir texto na tela
+let nome = "Lua";  // Comando LET para criar uma variável 
+let idade= 25;
+let numeroDeVendas = 50;
+let SaldoDisponivel = 1000;
+alert("Erro! Preencha todos os campos");
+let mensagemDeErro = "Erro! Preencha todos os campos"
+alert(mensagemDeErro);
+let nome = prompt ("Digite seu nome");  // Comando Prompt para exibi uma caixa de dialogo e interagir com o usuário.
+let idade = prompt("qual é sua idade");
+
+if (idade >= 18) {             // Comando IF de condição para executar certa função caso esteja dentro da condição estabelecida.
+    console.log("Pode tirar a habilitação"); // CONSOLE.LOG comando para imprimir na tela o texto após a condição for atendida.
+    
+}
