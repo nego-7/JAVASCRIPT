@@ -1,4 +1,5 @@
 //JOGO DO NUMERO SECRETO
+// Para continuar com jogando até acertar o número secreto será utilizado a condição ENQUANTO.
 
 alert('Boas vindas ao jogo do número secreto');
 let numeroSecreto = 3;
