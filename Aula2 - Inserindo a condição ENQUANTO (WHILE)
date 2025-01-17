@@ -2,18 +2,24 @@
 // Para continuar com jogando até acertar o número secreto será utilizado a ESTRUTURA DE REPETIÇÃO ENQUANTO.
 
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = 3;
+// Foi acrescentado depois o comando Math.randon para gerar números aleatórios
+//let numeroSecreto = 3;
+
+let  numeroSecreto = parseInt(Math.random() * 100 +1);
 console.log(numeroSecreto);
 let chute; 
-let tentativas;
+let tentativas = 1;
 
-// CONDIÇÃO PARA JOGANDO DANDO CONTINUIDADE ENQUANTO NÃO ACERTA O NÚMERO.
 while (chute != numeroSecreto){
-    chute = prompt('Escolha um número entre 1 e 10');
+    chute = prompt('Escolha um número entre 1 e 100');
 
     // se chute for igual ao número secreto
     if (chute == numeroSecreto) {
-        alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+
+        break; // Utilizado para PARAr apartir desse ponto e tudo tiver depois não será executado. 
+
+        // Esse alert foi transferido para fora do while para poder ser exibido e transformado em comentário 
+        //alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
     } else {
         //alert('Você errou :(')
         if (chute > numeroSecreto){
@@ -21,14 +27,27 @@ while (chute != numeroSecreto){
         } else{
             alert(`O número é maior que ${chute}`);
         }
-
-        // ALGORITMOS PARA SABER A QUANTIDADES DE TENTATIVAS e CONTINUA COM DENTRO DO WHILE
+    // ALGORITMOS PARA SABER A QUANTIDADES DE TENTATIVAS
     // 1º cria-se uma variável chamada tentativas
     // 2º inserir o comando abaixos. Tem duas formas
     // 3º inserir a variável tentativas no alert da linha 12 para exebir a quantidade quando for acertado o número secreto.
-
     //tentativas = tentativas + 1;
     tentativas++;
     }
 
 }
+//Foi criado esse IF para consertar o o erro da palavra numero de tentativas.
+// Se o numero de tentativas foi maior que 1 será exibido o 1º alert com tentativas no plural
+// Caso o numero seja menor que 1 será exibido o 2º alert que está no ELSE com tentativa no singular.
+//if (tentativas>1){
+   // alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+//} else {
+    //alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa`);
+//}
+// esse alert foi transferido para fora do while para poder ser exibido.
+//depois que foi criado o if, esse alert foi para dentro da condição IF
+//alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+
+//OUTRA FORMA DE INSERIR O IF PARA ERRO DE PALVARA NO SINGULAR E PLURAL.
+let palavraTentativa = tentativas > 1? "tentativas" : "tentativa";
+alert (`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
