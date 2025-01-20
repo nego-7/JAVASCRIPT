@@ -17,6 +17,8 @@ function exibirTextoNaTela(tag, texto) {
 exibirTextoNaTela("h1", "jogo do número secreto");
 exibirTextoNaTela("p", "Escola um número entre 1 a 10");
 
+
+//interação com botão
 function verificarChute (){
     console.log ("O botão foi clicado!");
 }
