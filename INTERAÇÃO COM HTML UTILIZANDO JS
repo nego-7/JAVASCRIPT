@@ -1,11 +1,21 @@
 //MANIPULANDO HTML COM JS
 // A primeira linha `let cabecalho = document.querySelector("h1");` seleciona o elemento HTML com a tag `<h1>` e armazena uma referência a ele na variável `titulo`.
 // 2. A segunda linha `cabecalho.innerHTML = "jogo do número secreto";` altera o conteúdo interno (innerHTML) do elemento `>` selecionado, substituindo o texto original pelo novo texto "Jogo do número secreto"
+
 let titulo = document.querySelector('h1'); // A variável titulo recebendo ou tranferindo função OU A TAG do HTML para o JS e para concluir entre parentese encontrase a função que será selecionado no HTML.
 titulo.innerHTML = "jogo do número secreto"; // InnerHTML significa dentro do HTML
 
 let paragrafo = document.querySelector('p');
 paragrafo.innerHTML = "Escolha um número de 1 a 10";
+
+
+// OUTRA FORMA DE IMPLEMENTAR OS COMANDOS ACIMA É ATRAVÉS DE FUNÇÕES
+function exibirTextoNaTela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
+exibirTextoNaTela("h1", "jogo do número secreto");
+exibirTextoNaTela("p", "Escola um número entre 1 a 10");
 
 function verificarChute (){
     console.log ("O botão foi clicado!");
